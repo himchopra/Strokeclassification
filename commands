@@ -4,4 +4,8 @@ Reference : http://product.hubspot.com/blog/git-and-github-tutorial-for-beginner
 3. To add one file to staging -- git add filename
 4. To add multiple files to staging -- git add -A file1 file2
 5. To commit file -- git commit
-6. To 
+6. To sync git (for first time) with online repository you have to use following commands:
+  a. git remote add origin https://github.com/cubeton/mynewrepository.git
+  b. git push -u origin master
+7. To sync git (when first sync has already happened) with online repository you have to use following commands:
+  a. git push origin

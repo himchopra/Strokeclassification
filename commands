@@ -1,0 +1,7 @@
+Reference : http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
+1. To start git -- git init
+2. To know list of files who have changed -- git status
+3. To add one file to staging -- git add filename
+4. To add multiple files to staging -- git add -A file1 file2
+5. To commit file -- git commit
+6. To 

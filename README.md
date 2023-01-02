@@ -86,16 +86,4 @@ e)	F1 = 2*Precision*Recall / (Precision + Recall)
 
 On Comparing various models, we realized that XG Boost is the best model (on basis of F1 Score)
 
-Models	Cross Validation	ROC AUC Curve	True Positive	False Negative	False Positive	True Negative	Precision	Recall	F1
-RandomForestClassifier	98%	74%	29%	21%	4%	46%	87%	58%	69%
-ExtraTreesClassifier	98%	72%	27%	23%	4%	46%	86%	53%	66%
-DecisionTreeClassifier	91%	74%	29%	21%	5%	45%	86%	58%	69%
-Support Vector Classification	85%	79%	43%	7%	14%	36%	75%	86%	80%
-XG Boost	95%	87%	44%	6%	8%	42%	85%	88%	87%
-Logistics Regression	92%	85%	43%	7%	9%	7%	83%	87%	85%
-
-
-
-
-
 

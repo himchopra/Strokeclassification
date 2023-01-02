@@ -42,19 +42,19 @@ On going deeper into categorical values
 On going deeper into binary values, only 2 values are observed (0 and 1) for hypertension, heart disease and stroke
 
 Univariate analysis
-• Incidence rate of stroke is 249/ 5110 = 4.87%
-• Some variability in incidence rate is observed over Gender (Male : 5.1% and Female : 4.7%)
-• Some variability in incidence rate is observed over Residence Type (Urban : 5.2% and Rural: 4.5%)
-• Some variability in incidence rate is observed over Work Type (Self employed : 7.9%, Govt_Job and Private : 5.0% and 5.1% respective, Children: 0.3% and Never worked : 0%)
-• Large variability in incidence rate is observed over hypertension (Yes : 13.3% and No : 4.0%)
-• Large variability in incidence rate is observed over heart disease (Yes : 17% and No : 4.2%)
-• Large variability in incidence rate is observed over ever married (Yes: 6.6% and No: 1.7%)
-• People with higher age tend to have higher chances of stroke: Concluded on basis of both scatter chart and box plot
-• BMI doesn’t show so much variability in box plot. However, with scatter plot till bmi value of 35 stroke is independent of bmi but post 35 stroke increases with bmi
+* Incidence rate of stroke is 249/ 5110 = 4.87%
+* Some variability in incidence rate is observed over Gender (Male : 5.1% and Female : 4.7%)
+* Some variability in incidence rate is observed over Residence Type (Urban : 5.2% and Rural: 4.5%)
+* Some variability in incidence rate is observed over Work Type (Self employed : 7.9%, Govt_Job and Private : 5.0% and 5.1% respective, Children: 0.3% and Never worked : 0%)
+* Large variability in incidence rate is observed over hypertension (Yes : 13.3% and No : 4.0%)
+* Large variability in incidence rate is observed over heart disease (Yes : 17% and No : 4.2%)
+* Large variability in incidence rate is observed over ever married (Yes: 6.6% and No: 1.7%)
+* People with higher age tend to have higher chances of stroke: Concluded on basis of both scatter chart and box plot
+* BMI doesn’t show so much variability in box plot. However, with scatter plot till bmi value of 35 stroke is independent of bmi but post 35 stroke increases with bmi
 
 Obviously, age can influence a lot of variables such as marital status, employment, its correlation is seen with all the variables. Before building correlation plot following transformations were made
-•	All categorical variables were encoded using dummy values, and 
-•	Null values of BMI were imputed with mean values
+* All categorical variables were encoded using dummy values, and 
+* Null values of BMI were imputed with mean values
 
 Following variables (ever_married, work_type_children, smoking_status_unknown) were found to be correlated with age
 
@@ -64,25 +64,25 @@ Considering incidence rate is 4.9% our data is an unbalanced data set. Hence, as
 ### Model Training and Evaluation
 
 Following models are tried
-a)	RandomForestClassifier
-b)	ExtraTreesClassifier
-c)	DecisionTreeClassifier
-d)	Support Vector Classification
-e)	XG Boost
-f)	Logistics Regression – On basis of model suggestion, preprocessing using StandardScaler was used for Logistics regression
+1. RandomForestClassifier
+2. ExtraTreesClassifier
+3. DecisionTreeClassifier
+4. Support Vector Classification
+5. XG Boost
+6. Logistics Regression – On basis of model suggestion, preprocessing using StandardScaler was used for Logistics regression
 
 For each of the above model, following metrics are evaluated
-a)	Cross Validation Score using RepeatedStratifiedKFold : In this data is splitted into multiple folds and in every run 1 fold is used as test dataset and remaining folds are used as train dataset. This process is repeated multiple times and average of scoring metric is used for model efficiency.
-b)	ROC AUC Curve : This is a measure of classification that how well model is able to classify 1 against 0. In ROC AUC Curve higher the value, better is the model able to classify. X-axis is False Positive rate and Y-axis is true positive rate
-      a.	True Positive (TP) = 1 (actual value) is being classified as 1 (predicted value)
-      b.	False Positive (FP) = 0 is being classified as 1
-      c.	True Negative (TN) = 0 is being classified as 0
-      d.	False Negative (FN) = 1 (actual value) is being classified as 0 (predicted value)
-      e.	False Positive Rate = FP / (FP + TN) i.e., Out of total actual 0 values, how many are we predicting as 0
-      f.	True Positive Rate = TP / (TP + FN) i.e., Out of total actual 1 values, how many are we predicting as 1
-c)	Precision = TP / (TP + FP) i.e., Out of total predicted values how many are we correctly predicting
-d)	Recall = TP / (TP + FN) i.e., is same as True Positive Rate and is also called Sensitivity
-e)	F1 = 2*Precision*Recall / (Precision + Recall)
+* Cross Validation Score using RepeatedStratifiedKFold : In this data is splitted into multiple folds and in every run 1 fold is used as test dataset and remaining folds are used as train dataset. This process is repeated multiple times and average of scoring metric is used for model efficiency.
+* ROC AUC Curve : This is a measure of classification that how well model is able to classify 1 against 0. In ROC AUC Curve higher the value, better is the model able to classify. X-axis is False Positive rate and Y-axis is true positive rate
+      * True Positive (TP) = 1 (actual value) is being classified as 1 (predicted value)
+      * False Positive (FP) = 0 is being classified as 1
+      * True Negative (TN) = 0 is being classified as 0
+      * False Negative (FN) = 1 (actual value) is being classified as 0 (predicted value)
+      * False Positive Rate = FP / (FP + TN) i.e., Out of total actual 0 values, how many are we predicting as 0
+      * True Positive Rate = TP / (TP + FN) i.e., Out of total actual 1 values, how many are we predicting as 1
+* Precision = TP / (TP + FP) i.e., Out of total predicted values how many are we correctly predicting
+* Recall = TP / (TP + FN) i.e., is same as True Positive Rate and is also called Sensitivity
+* F1 = 2*Precision*Recall / (Precision + Recall)
 
 On Comparing various models, we realized that XG Boost is the best model (on basis of F1 Score)
 

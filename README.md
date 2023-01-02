@@ -33,24 +33,24 @@ b.	3 columns are continuous i.e., float (age, avg_glucose_level, bmi)
 c.	3 columns are integer (hypertension, heart disease and stroke)
 
 On going deeper into categorical values
-•	Gender – has 3 unique values (Male : 2994, Female : 2115 and Other : 1). Looks like other is a data entry other and hence is removed from the data in the later part of the analysis
-•	Ever_Married – has 2 unique values (Yes : 3353 and No : 1757)
-•	Residence_Type – has 2 unique values (Urban: 2596 and Rural : 2514)
-•	Work_Type – has 5 unique values (Private: 2925, Self-employed : 819, Children : 687, Govt_Job : 657 and Never_Worked : 22)
-•	Smoking_Status – has 4 unique values (never smoked: 1892, formerly smoked : 885, smokes : 789 and Unknown : 1544). Unknown is a significant chunk and hence is considered as a legitimate value
+• Gender – has 3 unique values (Male : 2994, Female : 2115 and Other : 1). Looks like other is a data entry other and hence is removed from the data in the later part of the analysis
+• Ever_Married – has 2 unique values (Yes : 3353 and No : 1757)
+• Residence_Type – has 2 unique values (Urban: 2596 and Rural : 2514)
+• Work_Type – has 5 unique values (Private: 2925, Self-employed : 819, Children : 687, Govt_Job : 657 and Never_Worked : 22)
+• Smoking_Status – has 4 unique values (never smoked: 1892, formerly smoked : 885, smokes : 789 and Unknown : 1544). Unknown is a significant chunk and hence is considered as a legitimate value
 
 On going deeper into binary values, only 2 values are observed (0 and 1) for hypertension, heart disease and stroke
 
 Univariate analysis
-•	Incidence rate of stroke is 249/ 5110 = 4.87%
-•	Some variability in incidence rate is observed over Gender (Male : 5.1% and Female : 4.7%)
-•	Some variability in incidence rate is observed over Residence Type (Urban : 5.2% and Rural: 4.5%)
-•	Some variability in incidence rate is observed over Work Type (Self employed : 7.9%, Govt_Job and Private : 5.0% and 5.1% respective, Children: 0.3% and Never worked : 0%)
-•	Large variability in incidence rate is observed over hypertension (Yes : 13.3% and No : 4.0%)
-•	Large variability in incidence rate is observed over heart disease (Yes : 17% and No : 4.2%)
-•	Large variability in incidence rate is observed over ever married (Yes: 6.6% and No: 1.7%)
-•	People with higher age tend to have higher chances of stroke: Concluded on basis of both scatter chart and box plot
-•	BMI doesn’t show so much variability in box plot. However, with scatter plot till bmi value of 35 stroke is independent of bmi but post 35 stroke increases with bmi
+• Incidence rate of stroke is 249/ 5110 = 4.87%
+• Some variability in incidence rate is observed over Gender (Male : 5.1% and Female : 4.7%)
+• Some variability in incidence rate is observed over Residence Type (Urban : 5.2% and Rural: 4.5%)
+• Some variability in incidence rate is observed over Work Type (Self employed : 7.9%, Govt_Job and Private : 5.0% and 5.1% respective, Children: 0.3% and Never worked : 0%)
+• Large variability in incidence rate is observed over hypertension (Yes : 13.3% and No : 4.0%)
+• Large variability in incidence rate is observed over heart disease (Yes : 17% and No : 4.2%)
+• Large variability in incidence rate is observed over ever married (Yes: 6.6% and No: 1.7%)
+• People with higher age tend to have higher chances of stroke: Concluded on basis of both scatter chart and box plot
+• BMI doesn’t show so much variability in box plot. However, with scatter plot till bmi value of 35 stroke is independent of bmi but post 35 stroke increases with bmi
 
 Obviously, age can influence a lot of variables such as marital status, employment, its correlation is seen with all the variables. Before building correlation plot following transformations were made
 •	All categorical variables were encoded using dummy values, and 

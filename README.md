@@ -1,3 +1,3 @@
-# hello-world
+# DSTI Project Stroke Classification
 Check
 Check2
